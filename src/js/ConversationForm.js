@@ -11,7 +11,7 @@ import Button from 'grommet/components/Button';
 import CloseIcon from 'grommet/components/icons/base/Close';
 import TrashIcon from 'grommet/components/icons/base/Trash';
 // import SizeRemove from './SizeRemove';
-import NavAnchor from './NavAnchor';
+import RoutedAnchor from 'grommet-addons/components/RoutedAnchor';
 
 export default class ConversationForm extends Component {
 
@@ -86,12 +86,12 @@ export default class ConversationForm extends Component {
     // }
 
     return (
-      <Article align="center" pad={{horizontal: 'medium'}} primary={true}>
+      <Article align="center" primary={true}>
         <Form onSubmit={this._onSubmit}>
 
           <Header size="large" justify="between" pad="none">
             <h2><strong>{this.props.heading}</strong></h2>
-            <NavAnchor icon={<CloseIcon />} path="/conversations"
+            <RoutedAnchor icon={<CloseIcon />} path="/conversations"
               a11yTitle={`Close ${this.props.heading} Form`} />
           </Header>
 

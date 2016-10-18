@@ -69,12 +69,12 @@ export default class Conversations extends Component {
     });
 
     return (
-      <div>
+      <Box pad="medium">
         <Tiles>
           {tiles}
         </Tiles>
         {this.props.children}
-      </div>
+      </Box>
     );
   }
 }

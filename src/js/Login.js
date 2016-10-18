@@ -5,7 +5,7 @@ import Split from 'grommet/components/Split';
 import Sidebar from 'grommet/components/Sidebar';
 import LoginForm from 'grommet/components/LoginForm';
 import ChatIcon from 'grommet/components/icons/base/Chat';
-import TBD from 'grommet/components/TBD';
+import Box from 'grommet/components/Box';
 
 export default class Login extends Component {
 
@@ -29,9 +29,9 @@ export default class Login extends Component {
 
   render () {
     return (
-      <Split flex="left" separator={true}>
-        <TBD />
-        <Sidebar justify="center" pad="none" size="large">
+      <Split flex="left" >
+        <Box texture="img/Chatter-box-wendy.jpg" full="vertical" />
+        <Sidebar justify="center" pad="none" size="large" colorIndex="grey-3">
           <LoginForm align="start"
             logo={<ChatIcon size="large" />}
             title="Chat"

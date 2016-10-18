@@ -29,7 +29,7 @@ export default class Main extends Component {
     let sidebar;
     if (navActive) {
       sidebar = (
-        <Sidebar colorIndex="neutral-1" fixed={true}>
+        <Sidebar colorIndex="grey-3" fixed={true}>
           <Header size="large" justify="between" pad={{horizontal: 'medium'}}>
             <Title>
               <ChatIcon />
