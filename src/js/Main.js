@@ -2,8 +2,6 @@
 
 import React, { Component } from 'react';
 import SideSplit from 'grommet-addons/components/SideSplit';
-import RoutedAnchor from 'grommet-addons/components/RoutedAnchor';
-import RoutedButton from 'grommet-addons/components/RoutedButton';
 import Sidebar from 'grommet/components/Sidebar';
 import Header from 'grommet/components/Header';
 import Footer from 'grommet/components/Footer';
@@ -11,9 +9,11 @@ import Title from 'grommet/components/Title';
 import Heading from 'grommet/components/Heading';
 import UserIcon from 'grommet/components/icons/base/User';
 import Box from 'grommet/components/Box';
-import ChatIcon from 'grommet/components/icons/base/Chat';
 import Search from 'grommet/components/Search';
 import Menu from 'grommet/components/Menu';
+import Anchor from 'grommet/components/Anchor';
+import Button from 'grommet/components/Button';
+import ChatIcon from 'grommet/components/icons/base/Chat';
 import AddIcon from 'grommet/components/icons/base/Add';
 
 export default class Main extends Component {
@@ -40,7 +40,7 @@ export default class Main extends Component {
           </Header>
           <Box flex={true}>
             <Menu primary={true}>
-              <RoutedAnchor label="Conversations" path="/conversations" />
+              <Anchor label="Conversations" path="/conversations" />
             </Menu>
           </Box>
           <Footer pad={{horizontal: 'medium', vertical: 'small'}}>
@@ -49,7 +49,7 @@ export default class Main extends Component {
               <Box pad="medium">
                 <Heading tag="h3" margin="none">User name</Heading>
               </Box>
-              <RoutedAnchor label="Logout" path="/login" />
+              <Anchor label="Logout" path="/login" />
             </Menu>
           </Footer>
         </Sidebar>
@@ -68,7 +68,7 @@ export default class Main extends Component {
             <Search placeHolder="Search" size="medium"
               inline={true} fill={true} />
             <Menu inline={true} direction="row" responsive={false}>
-              <RoutedButton icon={<AddIcon />} path="/conversations/add" />
+              <Button icon={<AddIcon />} path="/conversations/add" />
             </Menu>
           </Header>
           {this.props.children}

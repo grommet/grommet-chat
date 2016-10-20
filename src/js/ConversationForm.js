@@ -8,10 +8,10 @@ import Footer from 'grommet/components/Footer';
 import FormFields from 'grommet/components/FormFields';
 import FormField from 'grommet/components/FormField';
 import Button from 'grommet/components/Button';
+import Anchor from 'grommet-addons/components/Anchor';
 import CloseIcon from 'grommet/components/icons/base/Close';
 import TrashIcon from 'grommet/components/icons/base/Trash';
 // import SizeRemove from './SizeRemove';
-import RoutedAnchor from 'grommet-addons/components/RoutedAnchor';
 
 export default class ConversationForm extends Component {
 
@@ -91,7 +91,7 @@ export default class ConversationForm extends Component {
 
           <Header size="large" justify="between" pad="none">
             <h2><strong>{this.props.heading}</strong></h2>
-            <RoutedAnchor icon={<CloseIcon />} path="/conversations"
+            <Anchor icon={<CloseIcon />} path="/conversations"
               a11yTitle={`Close ${this.props.heading} Form`} />
           </Header>
 
